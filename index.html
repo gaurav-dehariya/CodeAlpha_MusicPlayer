@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Music Player</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="album-art">
+            <i class="fas fa-music"></i>
+        </div>
+        
+        <div class="song-info">
+            <div class="song-title">Select a Song</div>
+            <div class="artist-name">Unknown Artist</div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn small" id="prevBtn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="control-btn large" id="playPauseBtn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="control-btn small" id="nextBtn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+        
+        <div class="volume-container">
+            <i class="fas fa-volume-down"></i>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+            <i class="fas fa-volume-up"></i>
+        </div>
+        
+        <div class="playlist">
+            <div class="playlist-header">
+                <div class="playlist-title">Playlist</div>
+                <button class="playlist-toggle" id="playlistToggle">Show</button>
+            </div>
+            <div class="playlist-items" id="playlistItems">
+                <!-- Playlist items will be dynamically generated -->
+            </div>
+        </div>
+        
+        <div class="autoplay-toggle">
+            <span>Autoplay</span>
+            <div class="toggle-switch" id="autoplayToggle">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+        
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
